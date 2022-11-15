@@ -38,9 +38,42 @@ body{
     background-color: green;
 }
 
+
 .userInfo{
     height: 13%;
     background-color: aqua;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.imgIconContainer{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+ /* .userImg{
+    width: 20%;
+} */
+
+.userName{
+    display: flex;
+    align-items: center;
+} 
+
+#myPic{
+    width: 80%;
+    border-radius: 50px;
+}
+
+.userIcons{
+    padding: 2rem;
+}
+
+.userIcons i{
+    margin-left: 5px;
 }
 
 .desktopNotifications{
@@ -71,3 +104,12 @@ body{
     background-color:tomato;
 }
 
+.chat{
+    height: 75%;
+    background-color: darkslategray;
+}
+
+.chatCommands{
+    height: 12%;
+    background-color:burlywood;
+}
