@@ -38,6 +38,7 @@ body{
     background-color: green;
 }
 
+    /*? COLONNA SINISTRA USER INFO*/
 
 .userInfo{
     height: 13%;
@@ -76,15 +77,73 @@ body{
     margin-left: 5px;
 }
 
+    /*? COLONNA SINISTRA DESKTOP NOTIFICATIONS*/
+
 .desktopNotifications{
     height: 12%;
     background-color:burlywood;
+    display: flex;
+    align-items: center;
 }
+
+.noNotificationIcon{
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-bell-slash{
+
+}
+
+.notificationText p{
+    font-size: 0.8rem;
+    line-height: 70%;
+}
+
+.underlinedBlue{
+    color: blue;
+    text-decoration: underline;
+}
+
+
+    /*? COLONNA SINISTRA SEARCH BAR*/
 
 .searchBar{
     height: 5%;
     background-color: darkmagenta;
 }
+
+.searchIcon{
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.searchBar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.searchInput input{
+    width: 400px;
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+
+
 
 .contacts{
     height: 70%;
