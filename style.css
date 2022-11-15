@@ -1,13 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
 }
 
-body{
-    height: 100vh;
-    background-color: red;
-    width: 100%;
+body {
+  height: 100vh;
+  background-color: red;
+  width: 100%;
 }
 
 /* #root{
@@ -20,155 +20,215 @@ body{
 
 /*! GENERAL */
 
-.columnContainer{
-    height: 90vh;
-    width: 80%;
-    margin: auto;
-    background-color: blue;
-    margin-top: 5vh;
-    display: flex;
+.columnContainer {
+  height: 90vh;
+  width: 80%;
+  margin: auto;
+  background-color: blue;
+  margin-top: 5vh;
+  display: flex;
 }
-
 
 /*! COLONNA SINISTRA */
 
-.leftColumn{
-    width: 35%;
-    height: 100%;
-    background-color: green;
+.leftColumn {
+  width: 35%;
+  height: 100%;
+  background-color: green;
 }
 
-    /*? COLONNA SINISTRA USER INFO*/
+/*? COLONNA SINISTRA USER INFO*/
 
-.userInfo{
-    height: 13%;
-    background-color: aqua;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+.userInfo {
+  height: 13%;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.imgIconContainer{
-    width: 40%;
-    display: flex;
-    justify-content: flex-start;
-    padding: 1rem;
+.imgIconContainer {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
 }
 
- /* .userImg{
+/* .userImg{
     width: 20%;
 } */
 
-.userName{
-    display: flex;
-    align-items: center;
-} 
-
-#myPic{
-    width: 80%;
-    border-radius: 50px;
+.userName {
+  display: flex;
+  align-items: center;
 }
 
-.userIcons{
-    padding: 2rem;
+#myPic {
+  width: 80%;
+  border-radius: 50px;
 }
 
-.userIcons i{
-    margin-left: 5px;
+.userIcons {
+  padding: 2rem;
 }
 
-    /*? COLONNA SINISTRA DESKTOP NOTIFICATIONS*/
-
-.desktopNotifications{
-    height: 12%;
-    background-color:burlywood;
-    display: flex;
-    align-items: center;
+.userIcons i {
+  margin-left: 5px;
 }
 
-.noNotificationIcon{
-    width: 90px;
+/*? COLONNA SINISTRA DESKTOP NOTIFICATIONS*/
+
+.desktopNotifications {
+  height: 12%;
+  background-color: burlywood;
+  display: flex;
+  align-items: center;
+}
+
+.noNotificationIcon {
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  margin-right: 2rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-bell-slash {
+}
+
+.notificationText p {
+  font-size: 0.8rem;
+  line-height: 70%;
+}
+
+.underlinedBlue {
+  color: blue;
+  text-decoration: underline;
+}
+
+/*? COLONNA SINISTRA SEARCH BAR*/
+
+.searchBar {
+  height: 5%;
+  background-color: darkmagenta;
+}
+
+.searchIcon {
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.searchBar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.searchInput input {
+  width: 300px;
+  margin-left: 1rem;
+}
+
+/*? COLONNA SINISTRA CONTACTS*/
+
+.contacts {
+  height: 70%;
+  background-color: darkcyan;
+}
+
+.contactCard{
     height: 90px;
-    background-color: white;
-    margin-right: 2rem;
-    margin-left: 1rem;
-    padding: 1rem;
-    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    background-color: cadetblue;
+}
+
+.contactIcon{
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.fa-bell-slash{
-
+.contactImage {
+  width: 80%;
+  border-radius: 50px;
+  padding: 1rem;
+  
 }
 
-.notificationText p{
+.contactInfo{
     font-size: 0.8rem;
-    line-height: 70%;
-}
-
-.underlinedBlue{
-    color: blue;
-    text-decoration: underline;
-}
-
-
-    /*? COLONNA SINISTRA SEARCH BAR*/
-
-.searchBar{
-    height: 5%;
-    background-color: darkmagenta;
-}
-
-.searchIcon{
-    align-items: center;
-    margin-left: 2rem;
-}
-
-.searchBar{
     display: flex;
-    width: 100%;
-    align-items: center;
-}
-
-.searchInput input{
-    width: 400px;
-    margin-left: 1rem;
-}
-
-
-
-
-
-
-
-
-
-.contacts{
-    height: 70%;
-    background-color:darkcyan;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 /*! COLONNA DESTRA */
 
-.rightColumn{
-    width: 65%;
-    height: 100%;
-    background-color: yellow;
+.rightColumn {
+  width: 65%;
+  height: 100%;
+  background-color: yellow;
 }
 
-.chatInfo{
-    height: 13%;
-    background-color:tomato;
+/*? COLONNA DESTRA CHAT INFO*/
+
+.chatInfo {
+  height: 13%;
+  background-color: tomato;
+  display: flex;
+  justify-content: space-between;
+
 }
 
-.chat{
-    height: 75%;
-    background-color: darkslategray;
+.rcInfoContainer{
+    display: flex;
+    align-items: center;
 }
 
-.chatCommands{
-    height: 12%;
-    background-color:burlywood;
+.chatImage{
+    width: 100px;
+    border-radius: 50px;
+    padding: 0.5rem;
+    margin-right: 2rem;
+}
+
+.chatIcons{
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.chat {
+  height: 75%;
+  background-color: darkslategray;
+}
+
+.chatCommands {
+  height: 12%;
+  background-color: burlywood;
 }
