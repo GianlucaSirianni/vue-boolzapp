@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: red;
+    width: 100%;
+}
+
+/* #root{
+    height: 90vh;
+    width: 80%;
+    margin: auto;
+    background-color: blue;
+    margin-top: 5vh;
+} */
+
+/*! GENERAL */
+
+.columnContainer{
+    height: 90vh;
+    width: 80%;
+    margin: auto;
+    background-color: blue;
+    margin-top: 5vh;
+    display: flex;
+}
+
+
+/*! COLONNA SINISTRA */
+
+.leftColumn{
+    width: 35%;
+    height: 100%;
+    background-color: green;
+}
+
+.userInfo{
+    height: 13%;
+    background-color: aqua;
+}
+
+.desktopNotifications{
+    height: 12%;
+    background-color:burlywood;
+}
+
+.searchBar{
+    height: 5%;
+    background-color: darkmagenta;
+}
+
+.contacts{
+    height: 70%;
+    background-color:darkcyan;
+}
+
+/*! COLONNA DESTRA */
+
+.rightColumn{
+    width: 65%;
+    height: 100%;
+    background-color: yellow;
+}
+
+.chatInfo{
+    height: 13%;
+    background-color:tomato;
+}
+
