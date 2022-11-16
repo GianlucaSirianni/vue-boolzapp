@@ -73,13 +73,13 @@
 
                 <div class="contacts">
                     <!-- contact card -->
-                    <div class="contactCard">
+                    <div class="contactCard" v-for="(element, index) in contacts" :key = 'index'>
                         <div class="contactIcon">
-                            <img src="./img/avatar_1.jpg" alt="" class="contactImage">
+                            <img :src= '"./img/avatar" + element.avatar + ".jpg"' alt="" class="contactImage">
                         </div>
                         <div class="contactInfo">
-                            <h6>NOME CONTATTO</h6>
-                            <p>ultimo messaggio</p>
+                            <h6>{{element.name}}</h6>
+                            <p>{{element.messages[element.messages.length - 1].message}}</p>
                         </div>
                     </div>
                 </div>
