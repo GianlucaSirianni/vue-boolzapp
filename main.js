@@ -3,7 +3,10 @@ var app = new Vue(
         el: '#root',
         
         data:{
-            
+
+            indexSelector: 0,
+            hour: "ultimo accesso oggi alle: " + Math.ceil(Math.random()*24),
+            min: Math.ceil(Math.random()*59),
 
             contacts: [
                 {
@@ -173,7 +176,13 @@ var app = new Vue(
 
         methods: {
 
-        }
+            selectedChat(element,index){
+
+                this.indexSelector = index;
+                console.log(index)
+              }
+        
+    }
 
 
     }

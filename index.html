@@ -73,9 +73,10 @@
 
                 <div class="contacts">
                     <!-- contact card -->
-                    <div class="contactCard" v-for="(element, index) in contacts" :key = 'index'>
+                    <div class="contactCard" v-for="(element, index) in contacts" :key='index'
+                        @click="selectedChat (element, index)">
                         <div class="contactIcon">
-                            <img :src= '"./img/avatar" + element.avatar + ".jpg"' alt="" class="contactImage">
+                            <img :src='"./img/avatar" + element.avatar + ".jpg"' alt="" class="contactImage">
                         </div>
                         <div class="contactInfo">
                             <h6>{{element.name}}</h6>
@@ -97,11 +98,12 @@
 
                     <div class="rcInfoContainer">
                         <div class="imgChat">
-                            <img src="./img/avatar_1.jpg" alt="" class="chatImage">
+                            <img :src='"./img/avatar" + contacts[indexSelector].avatar + ".jpg"' alt=""
+                                class="chatImage">
                         </div>
                         <div class="lastAccess">
-                            <h6>NOME CONTATTO</h6>
-                            <p>ultimo accesso oggi alle xx:xx</p>
+                            <h6>{{contacts[indexSelector].name}}</h6>
+                            <p>ultimo accesso oggi alle {{hour}}:{{min}}</p>
                         </div>
                     </div>
                     <div class="chatIcons">
@@ -121,6 +123,13 @@
 
                 <!-- chat -->
                 <div class="chat">
+                    <!-- contenitore messaggi -->
+                    <div v-for="(elem, index) in contacts[indexSelector].messages" :class= "(elem.status =='sent') ? 'sent' : 'received'">
+                        <!-- messaggio inviato -->
+                        <p>{{elem.message}}</p>
+                        
+
+                    </div>
 
                 </div>
 
