@@ -103,7 +103,7 @@
                         </div>
                         <div class="lastAccess">
                             <h6>{{contacts[indexSelector].name}}</h6>
-                            <p>ultimo accesso oggi alle {{hour}}:{{min}}</p>
+                            <p>{{hour}}:{{min}}</p>
                         </div>
                     </div>
                     <div class="chatIcons">
@@ -124,9 +124,13 @@
                 <!-- chat -->
                 <div class="chat">
                     <!-- contenitore messaggi -->
-                    <div v-for="(elem, index) in contacts[indexSelector].messages" :class= "(elem.status =='sent') ? 'sent' : 'received'">
+                    <div v-for="(elem, index) in contacts[indexSelector].messages" :class= "(elem.status =='sent') ? 'sent' : 'received'" class="msgShape">
                         <!-- messaggio inviato -->
                         <p>{{elem.message}}</p>
+                        <div class="dateMsg">
+                            <p>{{elem.date}}</p>
+                        </div>
+                        
                         
 
                     </div>
@@ -139,7 +143,7 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="inputMessage">
-                        <input type="text" placeholder="Scrivi il tuo messaggio..." id="msg">
+                        <input type="text" placeholder="Scrivi il tuo messaggio..." id="msg" v-model="newMessage" @keyup.enter="sendMessage">
                     </div>
                     <div class="record">
                         <i class="fa-solid fa-microphone"></i>

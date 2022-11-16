@@ -8,6 +8,8 @@ var app = new Vue(
             hour: "ultimo accesso oggi alle: " + Math.ceil(Math.random()*24),
             min: Math.ceil(Math.random()*59),
 
+            newMessage: '',
+
             contacts: [
                 {
                     name: 'Michele',
@@ -52,7 +54,8 @@ var app = new Vue(
                             status: 'sent'
                         }
                     ],
-                },      
+                },
+
                 {
                     name: 'Samuele',
                     avatar: '_3',
@@ -180,6 +183,30 @@ var app = new Vue(
 
                 this.indexSelector = index;
                 console.log(index)
+              },
+
+              sendMessage(){
+                console.log('sono dentro')
+                if (this.newMessage != ''){
+                    let newUserMsg = {
+                        date: 'just now',
+                        message: this.newMessage,
+                        status: 'sent',
+                    };
+                    this.contacts[this.indexSelector].messages.push(newUserMsg);
+                    this.newMessage = '';
+                    let newReply = {
+                        date: 'just now',
+                        message: 'ok?',
+                        status: 'received',
+                    }
+
+                    setTimeout(()=>{
+                        this.contacts[this.indexSelector].messages.push(newReply);
+                     },2000);
+
+
+                }
               }
         
     }
