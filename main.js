@@ -228,11 +228,10 @@ var app = new Vue(
                         return element.visible = true;
                     } else {
                         return element.visible = false;
-
                     }
                 })
               },
-
+     
               deleteMessage(){
                 console.log('im deleting the message')
                 this.contacts[this.indexSelector].messages.splice(this.msgIndexSelector,1);

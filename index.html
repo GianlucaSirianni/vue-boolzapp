@@ -80,7 +80,7 @@
                         </div>
                         <div class="contactInfo">
                             <h6>{{element.name}}</h6>
-                            <p>{{element.messages[element.messages.length - 1].message}}</p>
+                            <p v-if="element.messages.length > 0 ">{{element.messages[element.messages.length - 1]?.message }}</p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                 <!-- chat -->
                 <div class="chat">
                     <!-- contenitore messaggi -->
-                    <div v-for="(elem, index) in contacts[indexSelector].messages" :class= "(elem.status =='sent') ? 'sent' : 'received'" class="msgShape" @click="selectedMsg (element, index)">
+                    <div v-for="(elem, index) in contacts[indexSelector].messages" :class= "(elem.status =='sent') ? 'sent' : 'received'" class="msgShape" @click="selectedMsg (elem, index)">
                         <!-- messaggio inviato -->
                         <div class="iconDelete">
                             <p>{{elem.message}}</p>
