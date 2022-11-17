@@ -10,6 +10,10 @@ var app = new Vue(
 
             newMessage: '',
 
+            nameFilter: '',
+
+            
+
             contacts: [
                 {
                     name: 'Michele',
@@ -207,6 +211,19 @@ var app = new Vue(
 
 
                 }
+              },
+
+              filterSearch(){
+                console.log('stiamo filtrando!')
+                this.contacts.forEach(element => {
+                    let nameLC = element.name.toLowerCase();
+                    if (nameLC.includes(this.nameFilter)){
+                        return element.visible = true;
+                    } else {
+                        return element.visible = false;
+
+                    }
+                })
               }
         
     }

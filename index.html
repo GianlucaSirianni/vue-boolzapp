@@ -65,7 +65,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="searchInput">
-                        <input id="searcher" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input id="searcher" type="text" placeholder="Cerca un contatto" v-model="nameFilter" @keyup="filterSearch" >
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
 
                 <div class="contacts">
                     <!-- contact card -->
-                    <div class="contactCard" v-for="(element, index) in contacts" :key='index'
+                    <div class="contactCard" v-if="element.visible"  v-for="(element, index) in contacts" :key='index'
                         @click="selectedChat (element, index)">
                         <div class="contactIcon">
                             <img :src='"./img/avatar" + element.avatar + ".jpg"' alt="" class="contactImage">
