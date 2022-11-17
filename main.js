@@ -5,6 +5,7 @@ var app = new Vue(
         data:{
 
             indexSelector: 0,
+            msgIndexSelector: 0,
             hour: "ultimo accesso oggi alle: " + Math.ceil(Math.random()*24),
             min: Math.ceil(Math.random()*59),
 
@@ -189,6 +190,12 @@ var app = new Vue(
                 console.log(index)
               },
 
+              selectedMsg(element,index){
+
+                this.msgIndexSelector = index;
+                console.log(index)
+              },
+
               sendMessage(){
                 console.log('sono dentro')
                 if (this.newMessage != ''){
@@ -224,7 +231,13 @@ var app = new Vue(
 
                     }
                 })
+              },
+
+              deleteMessage(){
+                console.log('im deleting the message')
+                this.contacts[this.indexSelector].messages.splice(this.msgIndexSelector,1);
               }
+            
         
     }
 

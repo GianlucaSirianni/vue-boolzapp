@@ -219,8 +219,8 @@ body {
 
 .sent{
   background-color: rgba(220, 248, 192, 1);
-  max-width: 50%;
-  padding: 8px;
+  max-width: 250px;
+  padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
   align-self: flex-end;
@@ -251,6 +251,22 @@ body {
   margin-bottom: 0rem;
 }
 
+.iconDelete{
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconDelete span{
+  margin-left: 10px;
+}
+
+.btn{
+  border: none;
+  display: flex;
+  width: 10px;
+  margin-right: 5px;
+
+}
 
 
 
